@@ -1,3 +1,3 @@
 a=input()
 b=input()
-print(b in a)
+c=len(a)==len(b)
