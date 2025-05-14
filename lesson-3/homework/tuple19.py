@@ -1,0 +1,6 @@
+a=tuple(map(int,input().split()))
+b=int(input())
+c=list(a)
+c.remove(b)
+c=tuple(c)
+print(c)
