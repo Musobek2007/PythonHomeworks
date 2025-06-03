@@ -1,5 +1,0 @@
-a=int(input())
-b=int(input())
-c=int(input())
-d=set([a,b,c])
-print(len(d)>0)
