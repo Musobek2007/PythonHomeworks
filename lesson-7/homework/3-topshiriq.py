@@ -17,7 +17,9 @@ class TaskManager:
             self.title=input('Enter Title: ')
             self.description=input('Enter Description: ')
             self.due_date=input('Enter Due Date (YYYY-MM-DD): ')
-            self.status=input('Enter Status (Pending/In Progress/Completed): ')
+            self.status=input('Enter Status (In Progress/Completed): ')
+            if self.status not in ['In Progress','Completed']:
+                raise ValueError('Choose one of them')
             print('Task added successfully!\n')
             other=f'{self.task_id}, {self.title}, {self.description}, {self.due_date}, {self.status}'
             file.write(str(Task(other))+'\n')
@@ -34,7 +36,9 @@ class TaskManager:
         ne_title=input('Enter new title:')
         ne_description=input('Enter new description:')
         ne_due_date=input('Enter new due date:')
-        ne_status=input('Enter new status: ')
+        ne_status=input('Enter Status (In Progress/Completed): ')
+        if ne_status not in ['In Progress','Completed']:
+            raise ValueError('Choose one of them')
         with open(self.f_name,'w') as file:
             for i in records:
                 det=Task(i)
